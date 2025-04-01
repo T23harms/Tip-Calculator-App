@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Space Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --green400: hsl(172, 67%, 45%);
+    --green900: hsl(183, 100%, 15%);
+    --grey500: hsl(186, 14%, 43%);
+    --grey400: hsl(184, 14%, 56%);
+    --grey200: hsl(185, 41%, 84%);
+    --grey50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+  }
+
+  body {
+    font-family: 'Space Mono', sans-serif;
+    background-color: var(--grey200);
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+  }
+
+  .splitter {
+    position: absolute;
+    transform: translateY(-300px);
+    width: 80px;
+    height: auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    align-items: stretch;
+    width: 750px;
+    height: 400px;
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  /* left side of the Card*/
+  .left-box {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 30px;
+  }
+
+  .left-box span {
+    color: var(--green900);
+  }
+
+  input[type="number"], .custom {
+    cursor: pointer; 
+}
+
+  input:focus {
+    outline: 2px solid var(--green400);
+  }
+
+  .bill-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.bill-box img {
+    position: absolute;
+    left: 25px; 
+    width: 10px; 
+    height: auto;
+}
+
+.bill-box input, .people-box input {
+    width: 100%;
+    height: 35px;
+    padding-left: 30px;
+    padding-right: 10px; 
+    background-color: var(--grey50);
+    color: var(--green900);    
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.tip-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 35px);
+  justify-items: center;
+  align-items: center;
+  place-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.tip-boxes button.active {
+  background-color: var(--green400);
+  color: var(--green900);
+}
+
+.tip-boxes button.active:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.percent5 {
+  background-color: var(--green900);
+  color: var(--white);
+  border-radius: 5px;
+  border: 0;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent10 {
+  background-color: var(--green900);
+  color: var(--white);
+  border-radius: 5px;
+  border: 0;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  grid-row: 1;
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent15 {
+  background-color: var(--green900);
+  color: var(--white);
+  border-radius: 5px;
+  border: 0;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  grid-row: 1;
+  grid-column: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent25 {
+  background-color: var(--green900);
+  color: var(--white);
+  border-radius: 5px;
+  border: 0;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  grid-row: 2;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent50 {
+  background-color: var(--green900);
+  color: var(--white);
+  border-radius: 5px;
+  border: 0;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  grid-row: 2;
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom {
+  background-color: var(--grey50);
+  color: var(--green900);
+  border-radius: 5px;
+  border: 0;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  grid-row: 2;
+  grid-column: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.people-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.people-box img {
+  position: absolute;
+  left: 25px; 
+  width: 10px; 
+  height: auto;
+}
+
+/*right side of the Card*/
+.right-box {
+  padding: 30px;
+  display: flex;
+  background-color: var(--green900);
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  border-radius: 15px;
+}
+
+.right-box span {
+  color: var(--white);
+  font-size: 12px;
+}
+
+.right-box p {
+  color: var(--grey500);
+  font-size: 10px;
+}
+
+.right-box output {
+  color: var(--green400);
+  font-size: 35px;
+}
+
+.tip-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.total-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-box button {
+  background-color: var(--green400);
+  color: var(--green900);
+  cursor: not-allowed;
+  opacity: 0.2;
+  border-radius: 5px;
+  border: 0;
+  height: 35px;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  body {
+    height: auto;
+  }
+
+  .splitter {
+    margin-bottom: 5px;
+    transform: translateY(-265px);
+  }
+
+  main {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 25px;
+    margin-top: 120px;
+  }
+
+  .left-box {
+    padding: 5px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .tip-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 35px);
+  }
+
+  .percent5 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+  .percent10 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  
+  .percent15 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  
+  .percent25 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  
+  .percent50 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  
+  .custom {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .right-box {
+    width: 100%;
+    height: auto;
+    padding: 15px
+  }
+  
+  .total {
+    margin-bottom: 20px;
+  }
+}

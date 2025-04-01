@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <img class="splitter" src="images/logo.svg" alt="splitter">
+  <main class="card">
+    <!--left site of the card beginning-->
+    <section class="left-box">
+      <div>
+        <span>Bill</span>
+        <div class="bill-box">
+          <img src="images/icon-dollar.svg" alt="icon-dollar">
+          <input type="number" id="dollar-amount" name="dollar-amount" placeholder="0">
+        </div>
+      </div>
+      <div>
+        <span>Select Tip %</span>
+        <div class="tip-boxes">
+          <button class="percent5">5%</button>
+          <button class="percent10">10%</button>
+          <button class="percent15">15%</button>
+          <button class="percent25">25%</button>
+          <button class="percent50">50%</button>
+          <input type="number" class="custom" placeholder="Custom">
+        </div>
+      </div>
+      <div>
+        <span>Number of People</span> <span id="error-message" style="color: red; font-size: 12px; display: none;">Can't be zero</span>
+        <div class="people-box">
+          <img src="images/icon-person.svg" alt="icon-person">
+          <input type="number" id="people-amount" name="people-amount" placeholder="0">
+        </div>
+      </div>
+    </section>
+    <!--left site of the card end-->
+
+    <!--right site of the card beginning-->
+    <section class="right-box">
+      <div class="tip-amount">
+        <div class="tip-text">
+          <span>Tip Amount</span>
+          <p>/ person</p>
+        </div> 
+        <output id="tip-amount">$0.00</output>
+      </div>
+
+      <div class="total">
+        <div class="total-text">
+          <span>Total</span>
+          <p>/ person</p>
+        </div>
+        <output id="total">$0.00</output> 
+      </div>
+
+      <button id="reset-button" disabled>RESET</button>
+    </section>
+    <!--right site of the card end-->
+
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
